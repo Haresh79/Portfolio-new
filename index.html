@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Josefin+Sans&family=Roboto:wght@500&family=Varela+Round&display=swap" rel="stylesheet"><style type="text/css">
+*{margin:0; padding:0;}
+.right-f > icon{ font-size:50px;margin:2px 15px; color:white;}
+#initial{background:black; height:100vh; width:100vw; animation-name:divinout; animation-duration:2.1s; font-family: 'Acme', sans-serif;
+color:#ffdd1c; font-size:100px; text-align:center; position:absolute; z-index:199; text-shadow:0px 0px 3px rgba(255, 28, 92,0.7);}
+#msg{ position:relative; animation-name:msgtxt; animation-duration:2s;}
+@keyframes msgtxt{
+ 0%{top:0vh;}
+ 20%{top:30vh}
+ 80%{top:30vh;}
+ 100%{top:100vh;}
+}
+@keyframes divinout{
+ 0%{top:0vh;}
+ 80%{top:30vh;}
+ 100%{top:100vh;}
+}
+/* home section */
+.menu{
+  background:black; position:absolute; top:0;
+  width:200px; height:100vh; display:none;
+  color:white; font-size:20px; z-index:99;
+  animation-name:menuanimation; animation-duration:1s;
+}
+@keyframes menuanimation{
+ from{left:-200px;}
+ to{left:0px;}
+}
+.menu >li{list-style:none; margin:20px 10px 10px 40px; font-family: 'Josefin Sans', sans-serif;}
+li:hover {color:#1e74e6;}
+.present {color:#1e74e6;}
+#hambar{color:white; font-size:40px; margin-left:20px;}
+#close{ float:right; font-size:40px; margin-right:10px;}
+.left-box {position:relative; align-items:center; width:50vw;}
+.right-box {position:relative; align-items:center; }
+.left-box>h3{position:relative; top:50%; left:10%; font-family: 'Acme', sans-serif;
+ transform:translateY(-50%); font-size:35px; color:white;}
+.left-box>div{position:relative; top:50%; left:10%; transform:translateY(-50%); overflow:hidden; border-left:1px solid white;}
+.left-box>div>span { font-size:20px; color:#ffdd1c; position:relative; font-family: 'Josefin Sans', sans-serif; margin:4px;
+animation-name:profesionani; animation-duration:6s; animation-iteration-count:infinite;}
+@keyframes profesionani{
+  0%{left:-100%;}
+  20%{left:0%;}
+  80%{left:0%;}
+  100%{left:-100%;}
+}
+.home-body{flex-wrap:wrap; justify-content:center; height:80vh;}
+.left-f{ float:left; margin-left:3%; padding:10px; font-size:40px;}
+.left-f >a>i{ color:white; margin-left:10px; margin-right:10px;}
+.right-f{ float:right; margin-right:3%; font-size:20px; color:black;}
+
+.flex{ display:flex; }
+a{text-decoration:none; color:white;}
+header>icon{font-size:20px; color:black; margin:10px;}
+.home > footer { height:200px;}
+.home{ display:none; background:linear-gradient(to bottom right,#5a03fc,#2c03fc);}
+/*about section */
+.about>div{justify-content:center; flex-wrap:wrap; margin-top:20px;}
+.l-skill{width:350px; padding:5px; border:2px solid rgb(255, 213, 25);
+margin-top:20px; background:rgba(255, 213, 25,0.7); border-radius:8px;}
+.l-skill>p{color:white; font-family: 'Varela Round', sans-serif;}
+.r-skill{width:350px; padding:5px; border:2px solid rgb(133, 235, 122);
+margin-top:20px; background:rgba(133, 235, 122,0.7);border-radius:8px;}
+.r-skill>p{color:white; font-family: 'Varela Round', sans-serif;}
+.about>.skill {display:flex; flex-wrap:wrap; justify-content: space-around; }
+.about > h2{ color:white; margin:30px 0; font-family: 'Roboto', sans-serif;}
+.about > h3{ margin:5px 0; font-family: 'Roboto', sans-serif;}
+.about>header>icon{ font-size:50px; margin:2px 15px; color:white;}
+.about>footer{ margin-top:40px; height:100px;}
+.about>footer>.left-f>a>i {color:white;}
+.about {display:none; background:url('/storage/emulated/0/Documents/pixelLab/20230527_123831.png'); background-size:cover;height:100%;}
+
+/* project section */
+.project-boxs{display:flex; flex-wrap:wrap; justify-content:center;}
+.p-box {background:white; width:300px; padding:4px;margin:10px; border-radius:4px; transition-duration:1s;}
+.p-box:hover{transform:scale(1.1);}
+.p-1 {background:rgba(255, 110, 139,0.3);} .p-2{background:rgba(110, 187, 255,0.3);} .p-3{background:rgba(148, 255, 110,0.3);}
+.p-4{background:rgba(255, 110, 139,0.3);} .p-5{background:rgba(110, 187, 255,0.3);} .p-6{background:rgba(148, 255, 110,0.3);}
+.p-box>p {width:85%; margin:auto; font-family: 'Varela Round', sans-serif;}
+.p-box>div>h3{font-family: 'Roboto', sans-serif;}
+.p-box>button{position:relative; left:50%; transform:translateX(-50%);
+border:none; border-radius:8px; padding:2px 4px; background:#56b0f5; margin-top:5px;}
+.p-box>button:active{ background:white; border:1px solid #56b0f5; }
+.projects > header >icon{ font-size:50px; margin:2px 15px; color:white;}
+.projects > footer { margin-top:40px; height:100px;}
+.projects {display:none; background:url("/storage/emulated/0/Documents/pixelLab/20230526_151045.png"); background-size:cover;height:100%;}
+
+/* services section */
+.s-box{flex-wrap:wrap; justify-content:center; margin-top:30px;}
+.s-box>div{ background:white; width:250px; margin:10px; border-radius:5px;}
+.s-box>div:hover{ transform:scale(1.05); background:black; color:white; transition-duration:0.8s;}
+.s-box>div>p{text-align:center; margin:20px; font-family: 'Varela Round', sans-serif;}
+.s-box>div>h3{text-align:center; margin:20px; font-family: 'Roboto', sans-serif;}
+.s-box>div>i{ font-size:30px; color:#21c0ff; margin:10px 20px;}
+.services > header >icon{ font-size:50px; margin:2px 15px; color:white;}
+.services>footer{margin-top:40px; height:50px;}
+.services {display:none; background:url("/storage/emulated/0/Documents/pixelLab/20230526_155356.png");background-size:cover; height:100%;}
+
+/* Contact section*/
+.contact>form {width:80vw; margin:auto; background:rgba(43, 42, 42,0.9); margin-top:50px;
+display:flex; flex-direction:column; padding:5px; justify-content:center; align-items:center;}
+.contact>form>input{ margin:5px 0; height:50px; width:95%; padding:0 5px; color:white; background:rgba(0,0,0,0);border:none; 
+border-bottom:1px solid white; outline:none; font-size:25px; font-family: 'Varela Round', sans-serif;}
+.contact>form>textarea {margin:5px 0;height:150px; width:95%; padding:5px; color:white; background:rgba(0,0,0,0); 
+border:1px solid white;outline:none; font-size:20px; border-radius:10px; font-family: 'Varela Round', sans-serif;}
+.contact>form>button {margin:5px 0; width:20%; height:30px; background:#f54263; border:none; border-radius:8px; color:white;}
+.contact>.map{width:80vw; margin:50px auto; font-family: 'Varela Round', sans-serif;}
+.contact>.map>iframe {width:100%;}
+.contact>header>icon{ margin:10px 20px; font-size:40px; color:white;}
+.contact>.myinfo>div>i{color:white; background:#f54263; padding:5px;border-radius:50%;}
+.contact>.myinfo>div>a{ margin:0px 10px; font-size:18px;}
+.contact>.myinfo>div>a>i{ font-size:25px; margin:10px 5%;}
+.contact>.myinfo{ width:80vw; margin:auto; background:rgba(43, 42, 42,0.9);}
+.contact{display:none;background:url("/storage/emulated/0/Download/20230526_214514.png"); background-size:cover; height:100%;}
+</style>
+</head>
+<body bgcolor="#1f1f1f"  >
+<div id="initial"><span id="msg">Hii</span></div>
+<!-- section 1 -->
+<section class="home" id="home"  >
+ <header>
+  <icon id="hambar" onclick="menubarShow()">&#9776;</icon>
+ <div class="menu" id="menuSection" >
+ <icon id="close" onclick="menubarHidd()">&#9747;</icon>
+ <li class="present" onclick="showHome()" >Home</li>
+ <li onclick="showAbout()">About</li>
+ <li onclick="showProject()">Projects</li>
+ <li onclick="showServices()">Services</li>
+ <li onclick="showContactus()">Contatc Us</li>
+ <div>
+ </header>
+ <div class="flex home-body" >
+  <div class="left-box" >
+   <h3>Hello ! <br>I am Haresh</h3>
+   <div><span id="profasion">Web Developer</span></div>
+  </div>
+  <div class="right-box" >
+   <img src="/storage/emulated/0/Documents/pixelLab/20230526_195711.png" width="350px" >
+  </div>
+ </div>
+ <footer>
+  <div class="left-f" >
+  <a href="https://www.linkedin.com/in/haresh-panigrahi-825939242" ><i class="fa fa-linkedin"></i></a>
+   <a href="https://twitter.com/class_ama" ><i class="fa fa-twitter"></i></a>
+   <a href="mailto:technoharesh143@gmail.com" ><i class="fa fa-envelope"></i></a>
+  </div>
+  <div class="right-f" >
+   <icon onclick="showAbout()">&#10095;</icon>
+  </div>
+ </footer>
+</section>
+
+<!-- section 2 -->
+<section class="about" id="about"  >
+ <header><icon onclick="showHome()"> &#10094; </icon></header>
+ <h2 align="center" >About Myshelf</h2>
+ <div class="flex skill" >
+   <div class="l-skill" >
+    <h3 align="center" >Skills </h3>
+   <p>
+    Hii i am Haresh Panigrahi and I am very fascinated to learn new technology.
+    <br><br>And I know some technology like 
+    <br><br>&#10003; HTML, CSS, JS [ frontend Development ].
+    <br>&#10003; Java, OOP's, Collection Framework, Swing [ Application Development ].
+    <br>&#10003; C, C++, Python (Basics).
+   </p>
+   </div>
+   <div class="r-skill" >
+     <h3 align="center" >Academic </h3>
+    <p>Academics of my career are given below please check out.
+    <br><br>&#11088;M.P.C. Autonomous College, Baripada.
+    <br>&emsp; Currently i am doing my BCA here.
+    <br><br>&#11088;Remuna Higher Secondary School.
+    <br>&emsp; Passing : 2022 <br>&emsp; 83.5% in CHSE Board
+    </p>
+   </div>
+ </div>
+ <footer class="a-f" >
+ <div class="left-f" >
+ <a href="https://www.linkedin.com/in/haresh-panigrahi-825939242" ><i class="fa fa-linkedin"></i></a>
+ <a href="https://twitter.com/class_ama" ><i class="fa fa-twitter"></i></a>
+ <a href="mailto:technoharesh143@gmail.com" ><i class="fa fa-envelope"></i></a>
+ </div>
+ <div class="right-f" >
+ <icon onclick="showProject()">&#10095;</icon>
+ </div>
+ </footer>
+</section>
+
+<!-- section 3 -->
+<section class="projects" id="projects" >
+ <header><icon onclick="showAbout()" > &#10094; </icon></header>
+ <div class="project-boxs" >
+  <div class="p-box" >
+   <div class="p-1">
+    <h3 align="center" >Ama Class</h3>
+   </div>
+   <p align="center" >
+    Ama Class is a educational website for my Ama Class youtube channel
+    where you can get class 11th and 12th notes, Jee and Neet exam notes and study items, 
+    you can get coding related notes and classes .
+   </p>
+   <button><a href="" >Show</a></button>
+  </div>
+  <div class="p-box" >
+  <div class="p-2">
+  <h3 align="center" >Movie Master</h3>
+  </div>
+  <p align="center" >
+   This is a website where you can download any latest releases movie only one click.
+   In this site you also have movie review section where you have to just type the movie
+   name and you get all information related to that movie.
+  </p>
+  <button><a href="" >Show</a></button>
+  </div>
+  <div class="p-box" >
+  <div class="p-3">
+  <h3 align="center" >Snake Game</h3>
+  </div>
+  <p align="center" >
+   This is a web game, just like nokia snake game 
+   you have four buttons up, down, left, right , 
+   with the help of this button you can control the 
+   snake and the size of snake increases by eating foods.
+  </p>
+  <button><a href="" >Show</a></button>
+  </div>
+  <div class="p-box" >
+  <div class="p-4">
+  <h3 align="center" >Music Player</h3>
+  </div>
+  <p align="center" >
+   This is a web application for play music . Here you have next and previous button to 
+   control music and also with it you have a list where you have some songs by click them 
+   you can play any of them.
+  </p>
+  <button><a href="" >Show</a></button>
+  </div>
+  <div class="p-box" >
+  <div class="p-5">
+  <h3 align="center" >Piano Game</h3>
+  </div>
+  <p align="center" >
+   This is a web game for play piano. You can play sa,re,ga,ma... with it.
+   It totaly lookes like a piano.  
+  </p>
+  <button><a href="" >Show</a></button>
+  </div>
+  <div class="p-box" >
+  <div class="p-6">
+  <h3 align="center" >Analog Clock</h3>
+  </div>
+  <p align="center" >
+   This is a web application where you can see the time like a analog clock.
+   It have three sticks for hour, minute and second.
+  </p>
+  <button><a href="" >Show</a></button>
+  </div>
+ </div>
+ <footer>
+ <div class="left-f" >
+ <a href="https://www.linkedin.com/in/haresh-panigrahi-825939242" ><i class="fa fa-linkedin"></i></a>
+ <a href="https://twitter.com/class_ama" ><i class="fa fa-twitter"></i></a>
+ <a href="mailto:technoharesh143@gmail.com" ><i class="fa fa-envelope"></i></a>
+ </div>
+ <div class="right-f" >
+ <icon onclick="showServices()">&#10095;</icon>
+ </div>
+ </footer>
+</section>
+
+<!-- section 4 -->
+<section class="services" id="services"  >
+ <header><icon onclick="showProject()"> &#10094; </icon></header>
+ <div class="flex s-box" >
+  <div>
+   <i class="fa fa-desktop"></i>
+   <h3>Graphic Design</h3>
+   <p>We have Profesional Graphic Designer to design 
+   Youtube Thumbnell, Benners, Graphics, etc.</p>
+  </div>
+  <div>
+   <i class="fa fa-globe"></i>
+   <h3>Website Design</h3>
+   <p>We can make profesional Website as per client 
+   demands like Portfolios, E-commerce website, Web game and Web applications also.</p>
+  </div>
+  <div>
+   <i class="fa fa-android"></i>
+   <h3>Application Design</h3>
+   <p>We can make profesional Application as per client
+   demands like E-commerce App, Android App, Educational App, etc.</p>
+  </div>
+ </div>
+ <footer>
+ <div class="left-f" >
+ <a href="https://www.linkedin.com/in/haresh-panigrahi-825939242" ><i class="fa fa-linkedin"></i></a>
+ <a href="https://twitter.com/class_ama" ><i class="fa fa-twitter"></i></a>
+ <a href="mailto:technoharesh143@gmail.com" ><i class="fa fa-envelope"></i></a>
+ </div>
+ <div class="right-f" >
+ </div>
+ </footer>
+</section>
+<!-- New Section for Contact Us -->
+<section class="contact" id="contact" >
+<header><icon onclick="showHome()" class="fa fa-home" ></icon></header>
+ <form action="https://formspree.io/f/mayzzlyy"
+ method="POST">
+  <input type="text" id="name"  placeholder="Name" required="required" >
+  <input type="email" name="email" placeholder="E-mail Id" required="required" >
+  <input type="number" id="phone"  placeholder="Phone No."  required="required" >
+  <textarea name="message" placeholder="How can I help you ?"></textarea>
+  <button type="submit" >Send</button>
+ </form>
+ <div class="map" >
+ <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1pDlrlvlgxXXo9cN4V8MXmm7HygWgbHQ&ehbc=2E312F" width="640" height="480"></iframe>
+ </div>
+ <div class="myinfo" >
+   <div> <i class="fa fa-envelope" style="font-size:25px"></i><a href="mailto:technoharesh143@gmail.com" >technoharesh143@gmail.com</a></div>
+   <div><i class="fa fa-phone" style="font-size:25px"></i><a href="tel:+917381876799" >+91 7381876799</a></div>
+ <div>
+ <a href="https://www.linkedin.com/in/haresh-panigrahi-825939242" ><i class="fa fa-linkedin"></i></a>
+ <a href="https://twitter.com/class_ama" ><i class="fa fa-twitter"></i></a>
+ <a href="mailto:technoharesh143@gmail.com" ><i class="fa fa-envelope"></i></a></div>
+ </div>
+</section>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script type="text/javascript">
+
+let Profasion = document.getElementById('profasion');
+function myProfasion(){
+let profasion = Profasion.innerHTML;
+
+ if(profasion=="Web Developer"){
+   Profasion.innerHTML="Android Developer";
+ }
+ if(profasion=="Android Developer"){
+   Profasion.innerHTML="Youtuber";
+ }
+ if(profasion=="Youtuber"){
+   Profasion.innerHTML="Web Developer";
+ }
+}
+
+function menubarShow(){
+  document.getElementById('menuSection').style.display='block';
+}
+function menubarHidd(){
+  document.getElementById('menuSection').style.display='none';
+}
+
+function hiddInitial(){
+  document.getElementById('initial').style.display='none';
+}
+
+function showHome(){
+  document.getElementById('home').style.display='block';
+  hiddAbout(); hiddProject(); hiddServices(); hiddContactus();
+}
+function hiddHome(){
+  document.getElementById('home').style.display='none';
+}
+
+function showAbout(){
+  document.getElementById('about').style.display='block';
+  hiddHome(); hiddProject(); hiddServices(); hiddContactus();
+}
+function hiddAbout(){
+  document.getElementById('about').style.display='none';
+}
+
+function showProject(){
+  document.getElementById('projects').style.display='block';
+  hiddHome(); hiddAbout(); hiddServices(); hiddContactus();
+}
+function hiddProject(){
+  document.getElementById('projects').style.display='none';
+}
+
+function showServices(){
+  document.getElementById('services').style.display='block';
+  hiddHome(); hiddProject(); hiddAbout(); hiddContactus();
+}
+function hiddServices(){
+  document.getElementById('services').style.display='none';
+}
+
+function showContactus(){
+  document.getElementById('contact').style.display='block';
+  hiddHome(); hiddProject(); hiddAbout(); hiddServices();
+}
+function hiddContactus(){
+  document.getElementById('contact').style.display='none';
+}
+
+
+setTimeout(hiddInitial, 2000)
+showHome()
+setInterval(myProfasion, 6000)
+
+</script>
+</body>
+</html>
